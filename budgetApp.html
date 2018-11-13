@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Budget App - Fueled by JS.</title>
+
+    <!-- Estilos CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- Slider Pluggin jQuery-->
+    <script src="js/jquery/jquery.js"></script>
+    <script src="js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/moment/moment.js"></script>
+
+</head>
+
+<body style="background-color:white;">
+
+    <div id="wrapper">        
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <h3 id="title-h3-color">The Budget App  Fueled by JS. <img src="img/icon48.png" alt="The Budget App - Fueled by JS."></h3>
+            
+            <h4 class="title">Detailed Budget Info.</h4>            
+            <hr>
+            <h6 class="title">Up-To-Date Balance is: <span id="balance-id"></span></h6>
+            <h6 class="title">Total Incomes: <span id="total-incomes-span"></span></h6>
+            <h6 class="title">Total Expenses: <span id="total-expenses-span"></span></h6>
+            <hr>
+            <span>The Budget App - Fueled by JS. </span>
+            <br>
+            <span>&copy; Developed by Brayam Núñez</span>
+            <br>
+            <span>Ver. 2.0</span>
+        </div>
+        <img src="img/menu32.png" href="#menu-toggle" class="btn btn-info" id="menu-toggle"></img>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <section id="content">
+                    <div id="form-budget-app">
+                        <form id="budget-amount-form">
+                            <h5>Incomes/Expenses.</h5>
+                            <hr>
+                            <div id="budget-title">
+                                <label for="budget-title">Type Concept:</label>
+                                <input id="budget-concept-input" name="budget-concept-input" type="text" placeholder ="Type a short description for Income/Expense"/>
+                            </div>
+                            <div id="budget-choose">
+                                <label for="budget-choose">Concept Type: </label>
+                                <input id="budget-choose-income" name="budget-choose" type="radio" />
+                                <label for="income">Income</label>
+                                <input id="budget-choose-expense" name="budget-choose" type="radio" />
+                                <label for="expense">Expenses</label>
+                            </div>
+                            <div id="budget-money">
+                                <label for="budget-money">How much did you spend?</label>
+                                <input id="budget-amount-input" name="budget-amount-input" min="0" placeholder ="$0.00" type="number"/>
+                            </div>
+                            <input id="send-choose" class="btn btn-success" type="submit" value="Go" />
+                            <button id="clear-table" class="btn btn-danger" type="button">Clear Table</button>
+                        </form>
+                        <br>
+                        <div class="table-responsive" id="table-all">
+                            <!-- expenses to show -->
+                            <table id="table-querys" class="table">
+                                <thead id="table-header">
+                                    <tr id="table-query">
+                                        <th>Concept</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                        <th>Concept Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="querys-loaded">
+                                    <!-- querys to show dinamically from JS-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+                </section>
+
+                <a href="#" class="go-up">Up</a>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+
+<!-- JS-->
+<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="js/budgetApp.js"></script>
+
+</html>

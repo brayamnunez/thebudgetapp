@@ -1,0 +1,22 @@
+{
+ "manifest_version": 3,
+ "name": "The Budget App - Fueled by JS.",
+ "description": "Just another budget app. Enjoy!",
+ "icons": {
+	   "16": "icon16.png",
+	   "48": "icon48.png",
+	   "128": "icon128.png"
+	},
+ "version": "2.0",
+ "author": "Brayam Núñez",
+ "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+"browser_action": {
+   "default_icon": "tab-icon.png",
+   "default_title": "The Budget App - Fueled by JS",
+   "default_popup": "budgetApp.html"
+ },
+"chrome_url_overrides" : {
+  "newtab": "BudgetApp.html"
+},
+ "permissions": ["tabs"]
+}
